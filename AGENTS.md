@@ -1,10 +1,10 @@
 # Go Agent Guide
 
 This guide instructs agents how to write Go code that mirrors community best practices. Content is drawn from Effective Go, Uber's Go Style Guide, Go Code Review Comments, the Clean Architecture essay, and the Awesome Go catalog. Supporting detail lives in:
-- `docs/go/STYLE_GUIDE.md` (idioms and formatting)
-- `docs/go/ARCHITECTURE.md` (layering and dependency rules)
-- `docs/go/PATTERNS.md` (common solutions and resource selection)
-- `docs/go/LINTING.md` (tooling and checks)
+- [docs/go/STYLE_GUIDE.md](docs/go/STYLE_GUIDE.md) (idioms and formatting)
+- [docs/go/ARCHITECTURE.md](docs/go/ARCHITECTURE.md) (layering and dependency rules)
+- [docs/go/PATTERNS.md](docs/go/PATTERNS.md) (common solutions and resource selection)
+- [docs/go/LINTING.md](docs/go/LINTING.md) (tooling and checks)
 
 ## Operating Rules
 - Default to standard library and idiomatic patterns before adding dependencies; vet any new library (maintenance, license, API stability) via Awesome Go or upstream docs.
@@ -48,7 +48,7 @@ This guide instructs agents how to write Go code that mirrors community best pra
 - Entities and use cases contain business rules; they do not import transport or DB packages.
 - Interface adapters map between outer representations (HTTP/gRPC/DB) and inner DTOs/domain models.
 - Frameworks and drivers (HTTP server, gRPC runtime, DB client) are plugins; replaceable without rewriting business logic.
-- Package layout heuristic: `cmd/<app>` wires; `internal/<domain>` holds entities/use cases; adapters live alongside drivers; keep DTOs at boundaries. See `docs/go/ARCHITECTURE.md`.
+- Package layout heuristic: `cmd/<app>` wires; `internal/<domain>` holds entities/use cases; adapters live alongside drivers; keep DTOs at boundaries. See [docs/go/ARCHITECTURE.md](docs/go/ARCHITECTURE.md).
 
 ## Common Patterns & Snippets
 - **Error wrapping:**  
@@ -125,8 +125,8 @@ This guide instructs agents how to write Go code that mirrors community best pra
 - Start with the standard library. If a dependency is needed, search Awesome Go by category, then evaluate: maintenance cadence, documentation, test coverage, API clarity, license. Prefer stable, well-maintained options.
 
 ## References
-- Effective Go: go.dev/doc/effective_go  
-- Uber Go Style Guide: github.com/uber-go/guide  
-- Go Code Review Comments: go.dev/wiki/CodeReviewComments  
-- Clean Architecture: blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html  
-- Awesome Go: awesome-go.com
+- Effective Go: <https://go.dev/doc/effective_go>  
+- Uber Go Style Guide: <https://github.com/uber-go/guide>  
+- Go Code Review Comments: <https://go.dev/wiki/CodeReviewComments>  
+- Clean Architecture: <https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html>  
+- Awesome Go: <https://awesome-go.com/>
